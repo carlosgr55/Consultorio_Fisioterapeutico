@@ -48,3 +48,6 @@ input:hover{
 a{
     color: black;
 }
+.contenedor, header{
+  box-shadow: 10px 9px 15px 1px  lightslategray;
+}

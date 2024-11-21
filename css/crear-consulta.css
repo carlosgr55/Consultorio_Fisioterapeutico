@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: aquamarine;
+  align-items: flex-end;
+  box-shadow: 5px 0px 15px 1px lightslategray;
+}
+
+header .titulo {
+  margin-left: 10rem;
+  align-self: first baseline;
+  align-items: center;
+  width: 100%;
+}
