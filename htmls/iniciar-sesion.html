@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="..\css\inicio-sesion.css" />
     <title>Inicia sesion</title>
-</head>
-<body>
-    <h1>Inicia Sesion</h1>
-</body>
+  </head>
+  <body>
+    <header>
+      <div class="titulo">
+        <h1>Consultorio fisioterapeutico</h1>
+      </div>
+      <div class="fecha">
+        <p id="fecha-actual">fecha-actual</p>
+      </div>
+    </header>
+    <br />
+
+    <main>
+        <div class="contenedor">
+            <h2>Iniciar sesion</h2>
+            <div class="campo">
+                <label for="usuario">Usuario</label><br>
+                <input type="text" name="usuario" id="input-usuario">
+            </div>
+            <div class="campo">
+                <label for="password">Contraseña</label><br>
+                <input type="password" name="password" id="input-password">
+            </div>
+            <br>
+            <button type="button">Iniciar sesion</button>
+            <br id="espacio">
+            <a href="#">Registrate</a>
+            <br>
+        </div>
+
+    </main>
+  </body>
 </html>
