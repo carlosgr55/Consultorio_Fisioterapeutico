@@ -43,6 +43,11 @@ main {
 
 .texto {
   margin-top: 200px;
+  margin-right: 50px;
+  background-color: lightgray;
+  border-radius: 10px;
+  box-shadow: 5px 0px 15px 1px lightslategray;
+
 }
 .contenido p {
   text-align: center;
