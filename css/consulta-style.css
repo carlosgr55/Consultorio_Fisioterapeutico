@@ -1,0 +1,93 @@
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: #87cefa;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: aquamarine;
+  align-items: flex-end;
+  box-shadow: 5px 0px 15px 1px lightslategray;
+}
+
+header .titulo {
+  margin-left: 10rem;
+  align-self: first baseline;
+  align-items: center;
+  width: 100%;
+}
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: inherit;
+  gap: 10px;
+}
+main {
+  display: block;
+  margin: 0px;
+  padding: 30px;
+  background-color: lightskyblue;
+}
+.datos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.dato {
+  background-color: #cce9fb;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
+  box-shadow: 5px 0px 15px 1px lightslategray;
+}
+.campo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #cce9fb;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
+  box-shadow: 5px 0px 15px 1px lightslategray;
+}
+.campo textarea {
+  margin: 5px;
+}
+
+.valoracion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.valoracion-item {
+  background-color: #cce9fb;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
+  box-shadow: 5px 0px 15px 1px lightslategray;
+  width: fit-content;
+}
+.botones {
+  margin: 3px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.boton {
+  box-shadow: 5px 0px 15px 1px lightslategray;
+}
+.boton button{
+    font-size: 15px;
+    background: #cce9fb;
+    border: .5px solid white ;
+    border-radius: 2px;
+}

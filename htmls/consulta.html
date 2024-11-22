@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="..\css\consulta-style.css" />
+    <title>Consulta</title>
+  </head>
+  <body>
+    <header>
+      <div class="titulo">
+        <h1>Consultorio fisioterapeutico</h1>
+      </div>
+      <div class="fecha">
+        <p id="fecha-actual">fecha-actual</p>
+      </div>
+    </header>
+    <hr />
+
+    <main>
+      <div class="datos">
+        <div class="dato">
+          <p>Paciente: <span>Nombre-paciente</span></p>
+          <p></p>
+        </div>
+
+        <div class="dato">
+          <p>Edad: <span>Edad-paciente</span></p>
+        </div>
+      </div>
+      <br>
+      <div class="formulario">
+        <div class="campo">
+          <input type="checkbox" name="fuma" id="fuma-chk" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M3 13m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M8 13l0 4" />
+            <path d="M16 5v.5a2 2 0 0 0 2 2a2 2 0 0 1 2 2v.5" />
+          </svg>
+          <label for="fuma">Fuma</label>
+        </div>
+
+        <div class="campo">
+          <input type="checkbox" name="etilismo" id="eti-chk" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="24"
+            height="24"
+            stroke-width="2"
+          >
+            <path
+              d="M9 21h6a1 1 0 0 0 1 -1v-3.625c0 -1.397 .29 -2.775 .845 -4.025l.31 -.7c.556 -1.25 .845 -2.253 .845 -3.65v-4a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v4c0 1.397 .29 2.4 .845 3.65l.31 .7a9.931 9.931 0 0 1 .845 4.025v3.625a1 1 0 0 0 1 1z"
+            ></path>
+            <path d="M6 8h12"></path>
+          </svg>
+          <label for="etilismo">Bebe alcohol</label>
+        </div>
+
+        <div class="campo">
+          <input type="checkbox" name="diabetes" id="diab-chk" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="24"
+            height="24"
+            stroke-width="2"
+          >
+            <path
+              d="M11.174 7.17l.119 -.12a2 2 0 0 1 2.828 0l2.829 2.83a2 2 0 0 1 0 2.828l-.124 .124m-2 2l-2.123 2.123a2 2 0 0 1 -2.828 0l-2.829 -2.831a2 2 0 0 1 0 -2.828l2.113 -2.112"
+            ></path>
+            <path
+              d="M16.243 9.172l3.086 -.772a1.5 1.5 0 0 0 .697 -2.516l-2.216 -2.217a1.5 1.5 0 0 0 -2.44 .47l-1.248 2.913"
+            ></path>
+            <path
+              d="M9.172 16.243l-.772 3.086a1.5 1.5 0 0 1 -2.516 .697l-2.217 -2.216a1.5 1.5 0 0 1 .47 -2.44l2.913 -1.248"
+            ></path>
+            <path d="M3 3l18 18"></path>
+          </svg>
+          <label for="diabetes">Padece diabetes</label>
+        </div>
+
+        <div class="campo">
+          <input type="checkbox" name="cancer" id="cancer-chk" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M18 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M3 12a10 6.5 0 0 1 14 -6.5" />
+            <path d="M21 12a10 6.5 0 0 1 -14 6.5" />
+          </svg>
+          <label for="cancer">Padece cancer</label>
+        </div>
+
+        <div class="campo">
+          <input type="checkbox" name="alergias" id="alergias-chk" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M9 3m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            />
+            <path
+              d="M10 6v.98c0 .877 -.634 1.626 -1.5 1.77c-.866 .144 -1.5 .893 -1.5 1.77v8.48a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-8.48c0 -.877 -.634 -1.626 -1.5 -1.77a1.795 1.795 0 0 1 -1.5 -1.77v-.98"
+            />
+            <path d="M7 12h10" />
+            <path d="M7 18h10" />
+            <path d="M11 15h2" />
+          </svg>
+          <label for="alergias">Tiene alergias</label>
+        </div>
+        <div class="campo">
+          <input type="checkbox" name="fracturas" id="fracturas-chk" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M15 3a3 3 0 0 1 3 3a3 3 0 1 1 -2.12 5.122l-4.758 4.758a3 3 0 1 1 -5.117 2.297l0 -.177l-.176 0a3 3 0 1 1 2.298 -5.115l4.758 -4.758a3 3 0 0 1 2.12 -5.122z"
+            />
+          </svg>
+          <label for="fracturas">Fracturas</label>
+        </div>
+
+        <div class="campo">
+          <label for="reflejos">Reflejos</label>
+          <br />
+          <textarea
+            name="reflejos"
+            id="reflejos-txt"
+            cols="35"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="seisibilidad">Seisibilidad</label>
+          <br />
+          <textarea
+            name="seisibilidad"
+            id="seisibilidad-txt"
+            cols="35"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="sitio">Sitio</label>
+          <br>
+          <textarea name="sitio" id="sitio-txt" cols="35" rows="3"></textarea>
+        </div>
+      </div>
+      <hr>
+
+      <div class="valoracion">
+        <div class="valoracion-item">
+          <label for="diagnostico">Diagnostico</label>
+          <br />
+          <textarea
+            name="diagnostico"
+            id="diagnostico-txt"
+            cols="100"
+            rows="5"
+          ></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="botones">
+        <div class="boton">
+          <button type="button">Cancelar</button>
+        </div>
+        <br />
+        <div class="boton">
+          <button type="button">Enviar</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
