@@ -2,6 +2,7 @@ body {
   display: block;
   margin: 0;
   padding: 0;
+  background-color: lightcyan;
 }
 header {
   display: flex;
@@ -82,4 +83,48 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.titulo-main h1 {
+  text-align: center;
+}
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+}
+
+.miembro {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  height: fit-content;
+  box-shadow: 5px 0px 15px 1px lightslategray;
+}
+.miembro h3 {
+  font-size: 30px;
+}
+
+.miembro img {
+  max-width: 450px;
+  max-height: 900px;
+}
+
+.miembro:nth-child(1) {
+  grid-column: span 2;
+  height: 450px;
+}
+.miembro:nth-child(3) {
+  grid-column: span 2;
+}
+.miembro:nth-child(4) {
+  grid-column: span 1;
+  width: 450px;
 }
