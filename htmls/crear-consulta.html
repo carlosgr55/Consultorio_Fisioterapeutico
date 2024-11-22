@@ -15,14 +15,15 @@
         <p id="fecha-actual">fecha-actual</p>
       </div>
     </header>
-    <br />
     <hr />
+    <div class="crear-titulo">
+      <h2>Crear consulta</h2>
+      <hr>
+    </div>
     <main>
       <div class="formulario">
-        <h2>Crear consulta</h2>
         <div class="campo">
           <label for="nombre">Nombre</label>
-          <br />
           <input type="text" name="nombre" id="nombre-input" />
         </div>
         <div class="campo">
@@ -50,16 +51,26 @@
           <input type="text" name="numero" id="numero" />
         </div>
         <div class="campo">
-            <label for="motivo">Motivo</label>
-            <select name="motivo" id="motivo-select">
-                <option value="C">Consulta</option>
-                <option value="T">Terapia</option>
-                <option value="TG">Terapia grupal</option>
-              </select>
+          <label for="motivo">Motivo</label>
+          <select name="motivo" id="motivo-select">
+            <option value="C">Consulta</option>
+            <option value="T">Terapia</option>
+            <option value="TG">Terapia grupal</option>
+          </select>
         </div>
         <div class="campo">
-            <label for="fecha-con">Fecha de consulta</label>
-            <input type="datetime-local" name="fecha-con" id="fecha-con">
+          <label for="fecha-con">Fecha de consulta</label>
+          <input type="datetime-local" name="fecha-con" id="fecha-con" />
+        </div>
+      </div>
+      <br />
+      <div class="botones">
+        <div class="boton">
+          <button type="button">Enviar</button>
+        </div>
+        <br />
+        <div class="boton">
+          <button type="button">Cancelar</button>
         </div>
       </div>
     </main>
