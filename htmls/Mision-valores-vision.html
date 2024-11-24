@@ -92,11 +92,13 @@
     </main>
 
     <script>
+      function fecha(){
       var now = new Date();
       var datetime = now.toLocaleString();
 
       // Insert date and time into HTML
-      document.getElementById("fecha-actual").innerHTML = datetime;
+      document.getElementById("fecha-actual").innerHTML = datetime;}
+      setInterval(fecha, 1000);
     </script>
   </body>
 </html>
