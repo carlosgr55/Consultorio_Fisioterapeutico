@@ -28,7 +28,7 @@
           <p>Edad: <span>Edad-paciente</span></p>
         </div>
       </div>
-      <br>
+      <br />
       <div class="formulario">
         <div class="campo">
           <input type="checkbox" name="fuma" id="fuma-chk" />
@@ -190,11 +190,11 @@
 
         <div class="campo">
           <label for="sitio">Sitio</label>
-          <br>
+          <br />
           <textarea name="sitio" id="sitio-txt" cols="35" rows="3"></textarea>
         </div>
       </div>
-      <hr>
+      <hr />
 
       <div class="valoracion">
         <div class="valoracion-item">
@@ -208,7 +208,7 @@
           ></textarea>
         </div>
       </div>
-      <br>
+      <br />
       <div class="botones">
         <div class="boton">
           <button type="button">Cancelar</button>
@@ -219,5 +219,13 @@
         </div>
       </div>
     </main>
+
+    <script>
+      var now = new Date();
+      var datetime = now.toLocaleString();
+
+      // Insert date and time into HTML
+      document.getElementById("fecha-actual").innerHTML = datetime;
+    </script>
   </body>
 </html>

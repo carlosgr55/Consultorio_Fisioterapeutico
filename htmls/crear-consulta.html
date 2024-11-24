@@ -18,7 +18,7 @@
     <hr />
     <div class="crear-titulo">
       <h2>Crear consulta</h2>
-      <hr>
+      <hr />
     </div>
     <main>
       <div class="formulario">
@@ -74,5 +74,16 @@
         </div>
       </div>
     </main>
+
+
+
+
+    <script>
+      var now = new Date();
+      var datetime = now.toLocaleString();
+
+      // Insert date and time into HTML
+      document.getElementById("fecha-actual").innerHTML = datetime;
+    </script>
   </body>
 </html>

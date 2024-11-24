@@ -93,13 +93,19 @@
           </p>
         </div>
         <div class="miembro">
-            <h3>Electroterapia</h3>
-            <img src="..\media\electro.jpg" alt="" />
-            <p>
-              Contamos con un gran equipo para Electroterapia
-            </p>
-          </div>
+          <h3>Electroterapia</h3>
+          <img src="..\media\electro.jpg" alt="" />
+          <p>Contamos con un gran equipo para Electroterapia</p>
+        </div>
       </div>
     </main>
+
+    <script>
+      var now = new Date();
+      var datetime = now.toLocaleString();
+
+      // Insert date and time into HTML
+      document.getElementById("fecha-actual").innerHTML = datetime;
+    </script>
   </body>
 </html>
