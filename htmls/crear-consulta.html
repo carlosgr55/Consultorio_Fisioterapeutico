@@ -21,6 +21,16 @@
       <hr />
     </div>
     <main>
+      <div class="registro">
+        <h2>Ya has venido con nosotros?</h2>
+        <div class="item">
+          <label for="registro-existente">Ya he asistido</label>
+          <input type="radio" name="asistencia" id="registro-existente" />
+          <label for="asistencia">Es mi primera vez</label>
+          <input type="radio" name="asistencia" id="nuevo" />
+        </div>
+      </div>
+      <br />
       <div class="formulario">
         <div class="campo">
           <label for="nombre">Nombre</label>
@@ -75,15 +85,14 @@
       </div>
     </main>
 
-
-
     <script>
-      function fecha(){
-      var now = new Date();
-      var datetime = now.toLocaleString();
+      function fecha() {
+        var now = new Date();
+        var datetime = now.toLocaleString();
 
-      // Insert date and time into HTML
-      document.getElementById("fecha-actual").innerHTML = datetime;}
+        // Insert date and time into HTML
+        document.getElementById("fecha-actual").innerHTML = datetime;
+      }
       setInterval(fecha, 1000);
     </script>
   </body>

@@ -63,3 +63,18 @@ main {
   align-items: center;
 }
 
+.registro{
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  align-items: center;
+  box-shadow: 5px 0px 15px 1px lightslategray;
+  border-radius: 8px;
+}
+
+.registro .item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
