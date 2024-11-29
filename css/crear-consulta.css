@@ -78,3 +78,10 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+.campo-curp-registro{
+  display: none;
+}
+
+.campo-curp-primera{
+  display: none;
+}

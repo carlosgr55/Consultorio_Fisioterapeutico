@@ -25,13 +25,37 @@
         <h2>Ya has venido con nosotros?</h2>
         <div class="item">
           <label for="registro-existente">Ya he asistido</label>
-          <input type="radio" name="asistencia" id="registro-existente" />
+          <input
+            type="radio"
+            name="asistencia"
+            id="registro-existente"
+            onclick="checarRegistro()"
+          />
           <label for="asistencia">Es mi primera vez</label>
-          <input type="radio" name="asistencia" id="nuevo" />
+          <input
+            type="radio"
+            name="asistencia"
+            id="nuevo"
+            onclick="checarRegistro()"
+          />
         </div>
+        <br>
+        <div class="campo-curp-registro">
+          <label for="curp">Ingresa tu CURP</label>
+          <input type="text" name="curp" id="curp-registro" />
+          <input type="submit" value="Enviar" />
+        </div>
+        <div class="campo-curp-primera">
+          <label for="curp">Ingresa tu CURP</label>
+          <input type="text" name="curp" id="curp-registro" />
+        </div>
+        <br>
       </div>
       <br />
       <div class="formulario">
+
+        
+
         <div class="campo">
           <label for="nombre">Nombre</label>
           <input type="text" name="nombre" id="nombre-input" />
@@ -85,15 +109,6 @@
       </div>
     </main>
 
-    <script>
-      function fecha() {
-        var now = new Date();
-        var datetime = now.toLocaleString();
-
-        // Insert date and time into HTML
-        document.getElementById("fecha-actual").innerHTML = datetime;
-      }
-      setInterval(fecha, 1000);
-    </script>
+    <script src="..\js\crear-consulta.js"></script>
   </body>
 </html>
