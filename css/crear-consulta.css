@@ -85,3 +85,7 @@ main {
 .campo-curp-primera{
   display: none;
 }
+
+#curp-input{
+  display: none;
+}

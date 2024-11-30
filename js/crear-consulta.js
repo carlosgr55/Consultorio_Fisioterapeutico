@@ -1,5 +1,17 @@
 let primera = document.querySelector(".campo-curp-primera");
 let campo = document.querySelector(".campo-curp-registro");
+delimitarFecha();
+function delimitarFecha() {
+  let fecha = document.getElementById("fecha-con");
+  const date = new Date();
+
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+
+  let currentDate = `${year}-${month}-${day}T09:00`;
+  fecha.setAttribute("min",currentDate);
+}
 
 function fecha() {
   var now = new Date();

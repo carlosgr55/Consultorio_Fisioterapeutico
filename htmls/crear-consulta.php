@@ -1,28 +1,31 @@
 <?php
 include("..\php\conexion.php");
+$curpLeida = "";
+$curpQ = "";
+$nombre = "";
+$apellido = "";
+$sexo = "F";
+$edad = "";
+$correo = "";
+$telefono = "";
 if (isset($_POST["curp"])) {
-  $query = "SELECT nombre FROM paciente where curp = ?";
+  $query = "SELECT a.*, b.correo, b.telefono FROM paciente a inner join contactopaciente b on a.curp = b.curp where a.curp = ?";
   $curpLeida = $_POST["curp"];
   if ($sentencia = mysqli_prepare($conexion, $query)) {
-    mysqli_stmt_bind_param($sentencia, "s",$curpLeida);
+    mysqli_stmt_bind_param($sentencia, "s", $curpLeida);
     mysqli_stmt_execute($sentencia);
-    mysqli_stmt_bind_result($sentencia, $nombre);
+    mysqli_stmt_bind_result($sentencia, $curpQ, $nombre, $apellido, $edad, $sexo, $fecha, $correo, $telefono);
     mysqli_stmt_fetch($sentencia);
-    echo "NOMBRE " . $nombre;
   }
   mysqli_stmt_close($sentencia);
-
-
-
 }
-
 
 ?>
 
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -58,7 +61,7 @@ if (isset($_POST["curp"])) {
       <div class="campo-curp-registro">
         <form action="crear-consulta.php" method="post">
           <label for="curp">Ingresa tu CURP</label>
-          <input type="text" name="curp" id="curp-registro" />
+          <input value="<?php echo $curpLeida ?>" type="text" name="curp" id="curp-registro" />
           <input type="submit" value="Enviar" />
         </form>
       </div>
@@ -69,58 +72,62 @@ if (isset($_POST["curp"])) {
       <br />
     </div>
     <br />
-    <div class="formulario">
-      <div class="campo">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre-input" />
-      </div>
-      <div class="campo">
-        <label for="sexo">Sexo</label>
-        <select name="sexo" id="sexo-select">
-          <option value="F">Femenino</option>
-          <option value="M">Masculino</option>
-          <option value="N">Prefiero no decir</option>
-        </select>
-      </div>
-      <div class="campo">
-        <label for="fecha-nac">Fecha de nacimiento</label>
-        <input type="date" name="fecha-nac" id="fecha-nac" />
-      </div>
-      <div class="campo">
-        <label for="edad">Edad</label>
-        <input type="text" name="edad" id="edad" disabled />
-      </div>
-      <div class="campo">
-        <label for="correo">Correo electronico</label>
-        <input type="email" name="correo" id="correo-input" />
-      </div>
-      <div class="campo">
-        <label for="numero">Numero telefonico</label>
-        <input type="text" name="numero" id="numero" />
-      </div>
-      <div class="campo">
-        <label for="motivo">Motivo</label>
-        <select name="motivo" id="motivo-select">
-          <option value="C">Consulta</option>
-          <option value="T">Terapia</option>
-          <option value="TG">Terapia grupal</option>
-        </select>
-      </div>
-      <div class="campo">
-        <label for="fecha-con">Fecha de consulta</label>
-        <input type="datetime-local" name="fecha-con" id="fecha-con" />
-      </div>
-    </div>
-    <br />
-    <div class="botones">
-      <div class="boton">
-        <button type="button">Enviar</button>
+    <form action="..\php\enviar-consulta.php" method="POST">
+      <div class="formulario">
+        <input value="<?php echo $curpQ ?>" name="curpUsuario" id="curp-input" />
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input value="<?php echo $nombre ?>" name="nombre" id="nombre-input" />
+        </div>
+        <div class="campo">
+          <label for="sexo">Sexo</label>
+          <select name="sexo" id="sexo-select" value="<?php echo $sexo ?>">
+            <option value="F">Femenino</option>
+            <option value="M">Masculino</option>
+            <option value="NR">Prefiero no decir</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="fecha-nac">Fecha de nacimiento</label>
+          <input type="date" name="fecha-nac" id="fecha-nac" value="<?php echo $fecha ?>" />
+        </div>
+        <div class="campo">
+          <label for="edad">Edad</label>
+          <input type="text" name="edad" id="edad" disabled value="<?php echo $edad ?>" />
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electronico</label>
+          <input type="email" name="correo" id="correo-input" value="<?php echo $correo ?>" />
+        </div>
+        <div class="campo">
+          <label for="numero">Numero telefonico</label>
+          <input type="text" name="numero" id="numero" value="<?php echo $telefono ?>" />
+        </div>
+        <div class="campo">
+          <label for="motivo">Motivo</label>
+          <select name="motivo" id="motivo-select">
+            <option value="C">Consulta</option>
+            <option value="T">Terapia</option>
+            <option value="TG">Terapia grupal</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="fecha-con">Fecha de consulta</label>
+          <input type="datetime-local" name="fecha-con" id="fecha-con" />
+        </div>
       </div>
       <br />
-      <div class="boton">
-        <button type="button">Cancelar</button>
+      <div class="botones">
+        <div class="boton">
+          <input type="submit" value="Enviar">
+        </div>
+        <br />
+        <div class="boton" onclick="">
+          <button type="button">Cancelar</button>
+        </div>
       </div>
-    </div>
+    </form>
+
   </main>
 
   <script src="..\js\crear-consulta.js"></script>
