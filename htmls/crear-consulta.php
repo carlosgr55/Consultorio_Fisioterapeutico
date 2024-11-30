@@ -1,9 +1,20 @@
 <?php
-session_start();
+include("..\php\conexion.php");
+if (isset($_POST["curp"])) {
+  $query = "SELECT nombre FROM paciente where curp = ?";
+  $curpLeida = $_POST["curp"];
+  if ($sentencia = mysqli_prepare($conexion, $query)) {
+    mysqli_stmt_bind_param($sentencia, "s",$curpLeida);
+    mysqli_stmt_execute($sentencia);
+    mysqli_stmt_bind_result($sentencia, $nombre);
+    mysqli_stmt_fetch($sentencia);
+    echo "NOMBRE " . $nombre;
+  }
+  mysqli_stmt_close($sentencia);
 
 
 
-
+}
 
 
 ?>
