@@ -2,6 +2,24 @@
 include("..\php\conexion.php");
 
 if ($_POST) {
+
+    $curp = $_POST["curpUsuario"];
+    $nombre = $_POST["nombre"];
+    $fecha_nac = $_POST["fecha-nac"];
+    $sexo = $_POST["sexo"];
+    $correo = $_POST["correo"];
+    $telefono = $_POST["numero"];
+
+    $queryPaciente = "INSERT INTO paciente(curp, nombre, sexo, fecha_nac) value (?,?,?,?) ";
+    $sentenciaPaciente = mysqli_prepare($conexion, $queryPaciente);
+    mysqli_stmt_bind_param($sentenciaPaciente,"ssss",$curp, $nombre, $sexo, $fecha_nac);
+    mysqli_stmt_execute($sentenciaPaciente);
+
+    $queryContacto = "INSERT INTO contactoPaciente(curp, telefono, correo) value (?,?,?)";
+    $sentenciaContacto = mysqli_prepare($conexion, $queryContacto);
+    mysqli_stmt_bind_param($sentenciaContacto, "sss", $curp,$telefono, $correo);
+    mysqli_stmt_execute($sentenciaContacto);
+
     $mensaje = "";
     $motivo = $_POST["motivo"];
     if($motivo == "T" || $motivo == "TG") {
@@ -9,7 +27,6 @@ if ($_POST) {
     }else{
         $motivo = "Consulta";
     }
-    $curp = $_POST["curpUsuario"];
     $fecha = $_POST["fecha-con"];
     $fecha = substr($fecha,0,10);
 

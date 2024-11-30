@@ -37,7 +37,7 @@ function checarRegistro() {
     primera.style.display = "none";
     displayCampo();
   } else if (document.getElementById("nuevo").checked) {
-    campo.style.display = "none";
-    displayPrimeraVez();
+    document.getElementById("campoUsuarioDiv").style.display = "flex";
+    document.getElementById("enviar-info").action = "../php/consultaPrimera.php";
   }
 }

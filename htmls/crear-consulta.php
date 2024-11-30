@@ -65,16 +65,16 @@ if (isset($_POST["curp"])) {
           <input type="submit" value="Enviar" />
         </form>
       </div>
-      <div class="campo-curp-primera">
-        <label for="curp">Ingresa tu CURP</label>
-        <input type="text" name="curp" id="curp-registro" />
-      </div>
+      
       <br />
     </div>
     <br />
-    <form action="..\php\enviar-consulta.php" method="POST">
+    <form action="..\php\enviar-consulta.php" method="POST" id="enviar-info">
       <div class="formulario">
+      <div class="campo" id="campoUsuarioDiv">
+        <label for="curpUsuario">Curp</label>
         <input value="<?php echo $curpQ ?>" name="curpUsuario" id="curp-input" />
+        </div>
         <div class="campo">
           <label for="nombre">Nombre</label>
           <input value="<?php echo $nombre ?>" name="nombre" id="nombre-input" />
