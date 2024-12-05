@@ -122,8 +122,8 @@ if (isset($_POST["curp"])) {
           <input type="submit" value="Enviar">
         </div>
         <br />
-        <div class="boton" onclick="">
-          <button type="button">Cancelar</button>
+        <div class="boton" >
+          <button type="button" onclick="location.href = '../index.html';">Cancelar</button>
         </div>
       </div>
     </form>

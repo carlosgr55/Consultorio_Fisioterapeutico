@@ -1,4 +1,4 @@
-let primera = document.querySelector(".campo-curp-primera");
+let primera = document.querySelector("#campoUsuarioDiv");
 let campo = document.querySelector(".campo-curp-registro");
 delimitarFecha();
 function delimitarFecha() {
@@ -37,6 +37,7 @@ function checarRegistro() {
     primera.style.display = "none";
     displayCampo();
   } else if (document.getElementById("nuevo").checked) {
+    campo.style.display = "none";
     document.getElementById("campoUsuarioDiv").style.display = "flex";
     document.getElementById("enviar-info").action = "../php/consultaPrimera.php";
   }
